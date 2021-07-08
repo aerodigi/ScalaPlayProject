@@ -15,3 +15,8 @@ GET     /api/todos/:id                  controllers.api.TodoController.getById(i
 POST    /api/todos/add              controllers.api.TodoController.add
 PUT     /api/todos/update/:id           controllers.api.TodoController.update(id: Long)
 DELETE /api/todos/delete/:id         controllers.api.TodoController.delete(id: Long)
+GET     /api/apprentices            controllers.api.ApprenticeController.getAll
+GET     /api/apprentices/:id            controllers.api.ApprenticeController.getById(id: Long)
+POST    /api/apprentices/add              controllers.api.ApprenticeController.add
+PUT     /api/apprentices/update/:id     controllers.api.ApprenticeController.update(id: Long)
+DELETE /api/apprentices/delete/:id   controllers.api.ApprenticeController.delete(id: Long)
