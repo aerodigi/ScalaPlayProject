@@ -24,7 +24,7 @@ class ApprenticeController @Inject()(
       }
 
       def getById(id: Long) = Action.async { implicit request: Request[AnyContent] =>
-        apprenticeService.getItem(id) map { item =>
+        apprenticeService.getById(id) map { item =>
           Ok(Json.toJson(item))
         }
       }

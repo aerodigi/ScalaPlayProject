@@ -40,11 +40,11 @@ class ApprenticeList @Inject()(
 )(implicit executionContext: ExecutionContext)
     extends HasDatabaseConfigProvider[JdbcProfile] {
 
-  var ApprenticeList = TableQuery[ApprenticeTableDef]
+  var apprenticeList = TableQuery[ApprenticeTableDef]
 
-  def add(ApprenticeItem: Apprentice): Future[String] = {
+  def add(apprenticeItem: Apprentice): Future[String] = {
     dbConfig.db
-      .run(apprenticeList += apprentice)
+      .run(apprenticeList += apprenticeItem)
       .map(res => "ApprenticeItem successfully added")
       .recover {
         case ex: Exception => {
