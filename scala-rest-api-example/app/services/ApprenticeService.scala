@@ -1,3 +1,7 @@
+package services
+
+import com.google.inject.Inject
+import models.{Apprentice, ApprenticeList}
 
 import scala.concurrent.Future
 
